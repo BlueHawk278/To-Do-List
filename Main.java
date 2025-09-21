@@ -8,6 +8,9 @@ public class Main {
     static Member signedInMember = null;
 
     public static void main(String[] args) {
+
+        JavaProjects.ToDoList.File.Member.readData();
+
         System.out.println("Welcome to the To-Do List");
         while(true) {
             String choice = Menu.openingMenu();
@@ -36,17 +39,15 @@ public class Main {
                         Menu.chooseAlteration(signedInMember);
                     }
                     else if (menuChoice == 999) {
+                        JavaProjects.ToDoList.File.Member.writeData();
                         return;
                     }
                 }
             }
 
             else if (Integer.parseInt(choice) == 999) {
+                JavaProjects.ToDoList.File.Member.writeData();
                 return;
-            }
-
-            else {
-                Menu.openingMenu();
             }
         }
     }

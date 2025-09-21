@@ -35,7 +35,7 @@ public class Member {
         return false;
     }
 
-    static Member getMember(String username){
+    public static Member getMember(String username){
         for(Member member : members){
             if(member.username.equals(username)){
                 return member;
@@ -43,13 +43,13 @@ public class Member {
         }
         return null;
     }
-    static ArrayList<Member> getMembers(){
+    public static ArrayList<Member> getMembers(){
         return members;
     }
-    String getUsername(){
+    public String getUsername(){
         return this.username;
     }
-    String getPassword(){
+    public String getPassword(){
         return this.password;
     }
 

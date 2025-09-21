@@ -11,7 +11,7 @@ public class ToDo {
     private static final ArrayList<ToDo> ToDoList = new ArrayList<>();
 
     // Constructor with description
-    ToDo(String title, String description, Member member) {
+    public ToDo(String title, String description, Member member) {
         this.title = title;
         this.description = description;
         this.member = member;
@@ -19,7 +19,7 @@ public class ToDo {
         ToDoList.add(this);
     }
     // Constructor without description
-    ToDo(String title, Member member){
+    public ToDo(String title, Member member){
         this.title = title;
         this.member = member;
 
@@ -47,7 +47,7 @@ public class ToDo {
         }
     }
 
-    static ArrayList<ToDo> getList(){
+    public static ArrayList<ToDo> getList(){
         return ToDoList;
     }
     Member getMember() {
@@ -70,6 +70,6 @@ public class ToDo {
 
     @Override
     public String toString() {
-        return this.getTitle() + " " + this.getDescription();
+        return this.getTitle() + " " + this.getDescription() + "\n";
     }
 }
