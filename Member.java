@@ -7,7 +7,7 @@ public class Member {
     private String username;
     private String password;
 
-    private static ArrayList<Member> members = new ArrayList<>();
+    private static final ArrayList<Member> members = new ArrayList<>();
 
     public Member(String username, String password) {
         this.username = username;

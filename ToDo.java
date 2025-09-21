@@ -6,9 +6,9 @@ public class ToDo {
 
     private String title;
     private String description;
-    private Member member;
+    private final Member member;
 
-    private static ArrayList<ToDo> ToDoList = new ArrayList<ToDo>();
+    private static final ArrayList<ToDo> ToDoList = new ArrayList<>();
 
     // Constructor with description
     ToDo(String title, String description, Member member) {
@@ -27,7 +27,7 @@ public class ToDo {
     }
 
     static void removeToDo(String title, Member member){
-        ArrayList<ToDo> removeList = new ArrayList<ToDo>();
+        ArrayList<ToDo> removeList = new ArrayList<>();
         for(ToDo todo : ToDoList){
             if(todo.title.equals(title) && todo.member == member) {
                 removeList.add(todo);

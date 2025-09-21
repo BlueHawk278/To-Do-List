@@ -4,11 +4,11 @@ import java.io.*;
 
 public class File {
 
-    static private final String path = "C:\\Users\\harry\\OneDrive\\Computer_Science\\Programming\\Projects\\To-Do-List\\Members.txt";
+    static private final String path = "C:\\Users\\harry\\OneDrive\\Computer_Science\\Programming\\Projects\\JavaProjects\\ToDoList\\Database\\Members.txt";
 
     // Write data to members.txt
     public static void membersWriteData(){
-        try(FileWriter fw = new FileWriter(path, true)){
+        try(FileWriter fw = new FileWriter(path)){
             for(Member member : Member.getMembers()){
                 fw.write(member.getUsername() + "," + member.getPassword()+"\n");
             }
@@ -29,16 +29,6 @@ public class File {
             }
         }
         catch(IOException e){
-            System.out.println("Something went wrong: " + e.getMessage());
-        }
-    }
-
-    // Clear data before writing in again
-    public static void membersClearData(){
-        try(FileWriter fw = new FileWriter(path)){
-            fw.write("");
-        }
-        catch (IOException e) {
             System.out.println("Something went wrong: " + e.getMessage());
         }
     }

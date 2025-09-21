@@ -11,36 +11,29 @@ public class Main {
         System.out.println("Welcome to the To-Do List");
         while(true) {
             String choice = Menu.openingMenu();
-            Menu.signUp();
-            choice = Menu.openingMenu();
-            if (choice.equalsIgnoreCase("signup")) {
+            if (choice.equalsIgnoreCase("sign up")) {
                 Menu.signUp();
             }
 
-            else if (choice.equalsIgnoreCase("signin")) {
+            else if (choice.equalsIgnoreCase("sign in")) {
                 signedInMember = Menu.signIn();
                 int menuChoice;
                 while (true) {
                     menuChoice = Menu.mainMenu();
                     if (menuChoice == 1) {
                         Menu.addToDo(signedInMember);
-                        menuChoice = Menu.mainMenu();
                     }
                     else if (menuChoice == 2) {
                         ToDo.displayToDoList(signedInMember);
-                        menuChoice = Menu.mainMenu();
                     }
                     else if (menuChoice == 3) {
                         Menu.editToDo(signedInMember);
-                        menuChoice = Menu.mainMenu();
                     }
                     else if (menuChoice == 4) {
                         Menu.removeToDo(signedInMember);
-                        menuChoice = Menu.mainMenu();
                     }
                     else if (menuChoice == 5) {
                         Menu.chooseAlteration(signedInMember);
-                        menuChoice = Menu.mainMenu();
                     }
                     else if (menuChoice == 999) {
                         return;

@@ -97,7 +97,6 @@ public class Menu {
         System.out.println("Enter the title");
         String title = Main.scanner.nextLine();
         ToDo.removeToDo(title, signedInMember);
-        return;
     }
 
     public static void chooseAlteration(Member signedInMember){
