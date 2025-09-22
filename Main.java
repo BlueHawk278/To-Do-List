@@ -9,7 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        JavaProjects.ToDoList.File.Member.readData();
+        JavaProjects.ToDoList.Backend.Member.readData();
+        JavaProjects.ToDoList.Backend.ToDo.readData();
 
         System.out.println("Welcome to the To-Do List");
         while(true) {
@@ -39,14 +40,16 @@ public class Main {
                         Menu.chooseAlteration(signedInMember);
                     }
                     else if (menuChoice == 999) {
-                        JavaProjects.ToDoList.File.Member.writeData();
+                        JavaProjects.ToDoList.Backend.Member.writeData();
+                        JavaProjects.ToDoList.Backend.ToDo.writeData();
                         return;
                     }
                 }
             }
 
             else if (Integer.parseInt(choice) == 999) {
-                JavaProjects.ToDoList.File.Member.writeData();
+                JavaProjects.ToDoList.Backend.Member.writeData();
+                JavaProjects.ToDoList.Backend.ToDo.writeData();
                 return;
             }
         }

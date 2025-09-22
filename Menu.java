@@ -57,10 +57,8 @@ public class Menu {
                 String description = Main.scanner.nextLine();
                 new ToDo(title, description, signedInMember);
                 return;
-            } else if (descriptionRequested.equalsIgnoreCase("no")) {
-                new ToDo(title, signedInMember);
-                return;
-            } else {
+            }
+            else {
                 System.out.println("Invalid description. Please try again.");
             }
         }
